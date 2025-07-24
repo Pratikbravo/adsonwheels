@@ -6,46 +6,41 @@
   <title>I'm an Advertiser - Ads on Wheels</title>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css" rel="stylesheet">
   <style>
-    /* Header & Navigation */
-        header {
-            background-color: #fff;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            position: relative;
-            z-index: 100;
-            width: 100%;
-        }
-        
-        .header-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px 0;
-        }
-        
-        .logo {
-            height: 50px;
-        }
-        
-        .nav-menu {
-            display: flex;
-            list-style: none;
-        }
-        
-        .nav-menu li {
-            margin-left: 30px;
-        }
-        
-        .nav-menu a {
-            text-decoration: none;
-            color: #001F54;
-            font-family: 'AlibabaSans-Medium', sans-serif;
-            font-size: 16px;
-            transition: color 0.3s;
-        }
-        
-        .nav-menu a:hover {
-            color: #0057B8;
-        }
+    header {
+      background-color: #FFF;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      position: relative;
+      z-index: 100;
+      width: 100%;
+    }
+    .header-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 0;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .logo {
+      height: 50px;
+    }
+    .nav-menu {
+      display: flex;
+      list-style: none;
+    }
+    .nav-menu li {
+      margin-left: 30px;
+    }
+    .nav-menu a {
+      text-decoration: none;
+      color: #001F54;
+      font-family: 'Arial', sans-serif;
+      font-size: 16px;
+      transition: color 0.3s;
+    }
+    .nav-menu a:hover {
+      color: #0057B8;
+    }
 
     body {
       margin: 0;
@@ -124,7 +119,7 @@
 <body>
   <header>
     <div class="header-container">
-      <img src="assets/01dba466cd749599127fc9fde2d739e3283730988033a197ff49e46938a29ed9.png" alt="Ads on Wheels Logo" class="logo"> 
+      <img src="assets/01dba466cd749599127fc9fde2d739e3283730988033a197ff49e46938a29ed9.png" alt="Ads on Wheels Logo" class="logo">
       <ul class="nav-menu">
         <li><a href="#">Home</a></li>
         <li><a href="#">About Us</a></li>
@@ -141,7 +136,7 @@
     <div class="form-container">
       <h1>I'm an Advertiser</h1>
       <p>Ready to get your brand rolling? Fill out the form and our team will get in touch.</p>
-      <form action="https://formspree.io/f/mpwlqovp" method="POST">
+      <form action="https://formspree.io/f/your-form-id" method="POST">
         <div>
           <label for="name">Your Name</label>
           <input type="text" id="name" name="name" required>
