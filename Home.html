@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ads on Wheels - Mobile Advertising Solutions</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css" rel="stylesheet">
+    <style>
+        @font-face {
+            font-family: 'AlibabaSans-Bold';
+            src: url('https://assets-persist.lovart.ai/agent-static-assets/Alibaba-PuHuiTi-Bold.otf') format('opentype');
+            font-weight: bold;
+        }
+        
+        @font-face {
+            font-family: 'AlibabaSans-Medium';
+            src: url('https://assets-persist.lovart.ai/agent-static-assets/AlibabaSans-Medium.otf') format('opentype');
+            font-weight: 500;
+        }
+        
+        @font-face {
+            font-family: 'AlibabaSans-Regular';
+            src: url('https://assets-persist.lovart.ai/agent-static-assets/AlibabaSans-Regular.otf') format('opentype');
+            font-weight: normal;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'AlibabaSans-Regular', sans-serif;
+            color: #333;
+            line-height: 1.6;
+            background-color: #fff;
+            width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        
+        /* Header & Navigation */
+        header {
+            background-color: #fff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: relative;
+            z-index: 100;
+            width: 100%;
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+        
+        .logo {
+            height: 50px;
+        }
+        
+        .nav-menu {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-menu li {
+            margin-left: 30px;
+        }
+        
+        .nav-menu a {
+            text-decoration: none;
+            color: #001F54;
+            font-family: 'AlibabaSans-Medium', sans-serif;
+            font-size: 16px;
+            transition: color 0.3s;
+        }
+        
+        .nav-menu a:hover {
+            color: #0057B8;
+        }
+        
+        /* Hero Section */
+        .hero {
+            position: relative;
+            height: 600px;
+            overflow: hidden;
+            background-color: #F5F7FA;
+        }
+        
+        .hero-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to right, rgba(0,31,84,0.8) 0%, rgba(0,31,84,0.4) 100%);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 0 50px;
+        }
+        
+        .hero-content {
+            max-width: 600px;
+            color: #fff;
+        }
+        
+        .hero-title {
+            font-family: 'AlibabaSans-Bold', sans-serif;
+            font-size: 48px;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+        
+        .hero-subtitle {
+            font-size: 20px;
+            margin-bottom: 30px;
+            line-height: 1.5;
+        }
+        
+        .hero-buttons {
+            display: flex;
+            gap: 20px;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 15px 30px;
+            border-radius: 50px;
+            font-family: 'AlibabaSans-Medium', sans-serif;
+            font-size: 16px;
+            text-decoration: none;
+            text-align: center;
+            transition: all 0.3s;
+            cursor: pointer;
+        }
+        
+        .btn-primary {
+            background-color: #0057B8;
+            color: #fff;
+            border: 2px solid #0057B8;
+        }
+        
+        .btn-primary:hover {
+            background-color: #004494;
+            border-color: #004494;
+        }
+        
+        .btn-secondary {
+            background-color: #FF7A00;
+            color: #fff;
+            border: 2px solid #FF7A00;
+        }
+        
+        .btn-secondary:hover {
+            background-color: #e66e00;
+            border-color: #e66e00;
+        }
+        
+        /* Features Section */
+        .section {
+            padding: 80px 0;
+        }
+        
+        .section-title {
+            font-family: 'AlibabaSans-Bold', sans-serif;
+            font-size: 36px;
+            text-align: center;
+            margin-bottom: 50px;
+            color: #001F54;
+        }
+        
+        .features {
+            display: flex;
+            justify-content: space-between;
+            gap: 30px;
+        }
+        
+        .feature-card {
+            flex: 1;
+            background-color: #F5F7FA;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .feature-icon {
+            font-size: 40px;
+            color: #0057B8;
+            margin-bottom: 20px;
+        }
+        
+        .feature-title {
+            font-family: 'AlibabaSans-Bold', sans-serif;
+            font-size: 22px;
+            margin-bottom: 15px;
+            color: #001F54;
+        }
+        
+        .feature-description {
+            font-size: 16px;
+            color: #555;
+        }
+        
+        /* How It Works Section */
+        .how-it-works {
+            background-color: #F5F7FA;
+        }
+        
+        .process-image {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        /* Pricing Section */
+        .pricing-preview {
+            text-align: center;
+        }
+        
+        .pricing-image {
+            width: 100%;
+            max-width: 900px;
+            margin: 0 auto;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .pricing-link {
+            display: inline-block;
+            margin-top: 30px;
+            font-family: 'AlibabaSans-Medium', sans-serif;
+            color: #0057B8;
+            text-decoration: none;
+            font-size: 18px;
+        }
+        
+        .pricing-link:hover {
+            text-decoration: underline;
+        }
+        
+        /* Testimonials Section */
+        .testimonials {
+            display: flex;
+            justify-content: space-between;
+            gap: 30px;
+        }
+        
+        .testimonial-card {
+            flex: 1;
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            position: relative;
+        }
+        
+        .testimonial-text {
+            font-size: 16px;
+            margin-bottom: 20px;
+            font-style: italic;
+        }
+        
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+        }
+        
+        .author-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: #0057B8;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            margin-right: 15px;
+        }
+        
+        .author-info h4 {
+            font-family: 'AlibabaSans-Medium', sans-serif;
+            margin-bottom: 5px;
+        }
+        
+        .author-info p {
+            font-size: 14px;
+            color: #777;
+        }
+        
+        .quote-icon {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 30px;
+            color: #F5F7FA;
+        }
+        
+        /* CTA Section */
+        .cta {
+            background: linear-gradient(135deg, #0057B8 0%, #001F54 100%);
+            color: #fff;
+            border-radius: 10px;
+            padding: 60px;
+            text-align: center;
+            margin: 80px 0;
+        }
+        
+        .cta-title {
+            font-family: 'AlibabaSans-Bold', sans-serif;
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+        
+        .cta-text {
+            font-size: 18px;
+            margin-bottom: 30px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: #001F54;
+            color: #fff;
+            padding: 60px 0 30px;
+        }
+        
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 40px;
+        }
+        
+        .footer-column {
+            flex: 1;
+            padding-right: 30px;
+        }
+        
+        .footer-logo {
+            margin-bottom: 20px;
+            width: 150px;
+        }
+        
+        .footer-about {
+            margin-bottom: 20px;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+        
+        .footer-title {
+            font-family: 'AlibabaSans-Bold', sans-serif;
+            font-size: 18px;
+            margin-bottom: 20px;
+            color: #2FD19B;
+        }
+        
+        .footer-links {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-links a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.3s;
+        }
+        
+        .footer-links a:hover {
+            color: #2FD19B;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 15px;
+        }
+        
+        .social-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            color: #fff;
+            font-size: 20px;
+            transition: background-color 0.3s;
+        }
+        
+        .social-link:hover {
+            background-color: #0057B8;
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header>
+        <div class="container header-container">
+            <img src="/Users/pratickdey/Downloads/Website Final/assets/01dba466cd749599127fc9fde2d739e3283730988033a197ff49e46938a29ed9.png" alt="Ads on Wheels Logo" class="logo">
+            <ul class="nav-menu">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Cities</a></li>
+                <li><a href="#">How It Works</a></li>
+                <li><a href="#">Pricing</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <img src="/Users/pratickdey/Downloads/Website Final/assets/a9e45cae-afc3-4eb9-9f52-2b08c07b2420.png" alt="Car with advertisements" class="hero-image">
+        <div class="hero-overlay">
+            <div class="hero-content">
+                <h1 class="hero-title">Turn Your Drive Into Income</h1>
+                <p class="hero-subtitle">Connect with brands looking to advertise on vehicles or find drivers to display your ads across the city.</p>
+                <div class="hero-buttons">
+                    <a href="#" class="btn btn-primary">I'm an Advertiser</a>
+                    <a href="#" class="btn btn-secondary">Become a Driver Partner</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- Features Section -->
+<section class="section">
+    <div class="container">
+        <h2 class="section-title">Why Choose Ads on Wheels?</h2>
+        <div class="features">
+            <div class="feature-card">
+                <i class="ri-focus-3-line feature-icon"></i>
+                <h3 class="feature-title">Targeted Advertising</h3>
+                <p class="feature-description">Target specific neighborhoods, routes, and demographics with mobile ads that go where your customers are.</p>
+            </div>
+            <div class="feature-card">
+                <i class="ri-money-dollar-circle-line feature-icon"></i>
+                <h3 class="feature-title">Cost-Effective</h3>
+                <p class="feature-description">Get more impressions for your budget compared to traditional billboards or digital ads.</p>
+            </div>
+            <div class="feature-card">
+                <i class="ri-car-line feature-icon"></i>
+                <h3 class="feature-title">Passive Income</h3>
+                <p class="feature-description">Drivers earn extra income simply by doing what they already do - driving their vehicles.</p>
+            </div>
+            <div class="feature-card">
+                <i class="ri-line-chart-line feature-icon"></i>
+                <h3 class="feature-title">Performance Tracking</h3>
+                <p class="feature-description">Advanced GPS tracking and analytics to measure campaign performance and reach.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- How It Works Section -->
+    <section class="section how-it-works">
+        <div class="container">
+            
+            <img src="https://assets-persist.lovart.ai/agent_images/35183273-a1d1-4d14-82fa-6824f140571d.png" alt="How Ads on Wheels works" class="process-image">
+        </div>
+    </section>
+
+  <!-- Pricing Section -->
+  <section class="section">
+    <div class="container pricing-preview">
+        <h2 class="section-title">Flexible Pricing Options</h2>
+        <img src="/Users/pratickdey/Downloads/Website Final/assets/adc3b6af-8430-46eb-8753-df607d879258.png" alt="Pricing tiers" class="pricing-image">
+        <br><a href="#" class="pricing-link">View detailed pricing <i class="ri-arrow-right-line"></i></a>
+    </div>
+</section>
+
+<!-- Testimonials Section -->
+<section class="section">
+    <div class="container">
+        <h2 class="section-title">What Our Clients Say</h2>
+        <div class="testimonials">
+            <div class="testimonial-card">
+                <p class="testimonial-text">"Ads on Wheels helped us reach neighborhoods we couldn't target effectively with digital ads. Our foot traffic increased by 32% during the campaign!"</p>
+                <div class="testimonial-author">
+                    <div class="author-avatar">JD</div>
+                    <div class="author-info">
+                        <h4>John Doe</h4>
+                        <p>Marketing Director, Local Cafe Chain</p>
+                    </div>
+                </div>
+                <i class="ri-double-quotes-r quote-icon"></i>
+            </div>
+            <div class="testimonial-card">
+                <p class="testimonial-text">"I'm earning an extra $400 per month just by having ads on my car while I drive for my regular commute and errands. It couldn't be easier!"</p>
+                <div class="testimonial-author">
+                    <div class="author-avatar">SM</div>
+                    <div class="author-info">
+                        <h4>Sarah Miller</h4>
+                        <p>Driver Partner, 8 months</p>
+                    </div>
+                </div>
+                <i class="ri-double-quotes-r quote-icon"></i>
+            </div>
+            <div class="testimonial-card">
+                <p class="testimonial-text">"The analytics dashboard is impressive. We could see exactly where our ads were being displayed and adjust our strategy in real-time."</p>
+                <div class="testimonial-author">
+                    <div class="author-avatar">RJ</div>
+                    <div class="author-info">
+                        <h4>Robert Johnson</h4>
+                        <p>CEO, Tech Startup</p>
+                    </div>
+                </div>
+                <i class="ri-double-quotes-r quote-icon"></i>
+            </div>
+        </div>
+    </div>
+</section>
+      
+<!--CTA Section-->
+<section class="container">
+    <div class="cta">
+        <h2 class="cta-title">Ready to Get Started?</h2>
+        <p class="cta-text">Whether you're looking to advertise your business or earn extra income as a driver, Ads on Wheels has the perfect solution for you.</p>
+        <div class="cta-buttons">
+            <a href="#" class="btn btn-secondary">I'm an Advertiser</a>
+            <a href="#" class="btn btn-primary">Become a Driver Partner</a>
+        </div>
+    </div>
+</section>
+<!--Footer-->
+    <footer style="background-color: #001F54; color: #fff; padding: 60px 20px 30px; font-family: Arial, sans-serif;">
+        <div style="max-width: 1200px; margin: 0 auto; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 40px;">
+          <div style="flex: 1 1 200px;">
+            <img src="/Users/pratickdey/Downloads/Website Final/assets/01dba466cd749599127fc9fde2d739e3283730988033a197ff49e46938a29ed9.png" alt="Ads on Wheels Logo" style="width: 150px; margin-bottom: 20px;">
+            <p style="font-size: 14px; line-height: 1.6;">Ads on Wheels connects businesses with drivers to create mobile advertising campaigns that are effective, measurable, and beneficial for everyone involved.</p>
+          </div>
+          <div style="flex: 1 1 150px;">
+            <h4 style="color: #2FD19B; margin-bottom: 15px;">Quick Links</h4>
+            <ul style="list-style: none; padding: 0; font-size: 14px;">
+              <li><a href="#" style="color: #fff; text-decoration: none;">Home</a></li>
+              <li><a href="#" style="color: #fff; text-decoration: none;">About Us</a></li>
+              <li><a href="#" style="color: #fff; text-decoration: none;">How It Works</a></li>
+              <li><a href="#" style="color: #fff; text-decoration: none;">Pricing</a></li>
+              <li><a href="#" style="color: #fff; text-decoration: none;">Contact Us</a></li>
+            </ul>
+          </div>
+          <div style="flex: 1 1 150px;">
+            <h4 style="color: #2FD19B; margin-bottom: 15px;">For Advertisers</h4>
+            <ul style="list-style: none; padding: 0; font-size: 14px;">
+              <li><a href="#" style="color: #fff; text-decoration: none;">Campaign Planning</a></li>
+              <li><a href="#" style="color: #fff; text-decoration: none;">Ad Design Services</a></li>
+              <li><a href="#" style="color: #fff; text-decoration: none;">Analytics Dashboard</a></li>
+              <li><a href="#" style="color: #fff; text-decoration: none;">Case Studies</a></li>
+              <li><a href="#" style="color: #fff; text-decoration: none;">FAQ</a></li>
+            </ul>
+          </div>
+          <div style="flex: 1 1 150px;">
+            <h4 style="color: #2FD19B; margin-bottom: 15px;">For Drivers</h4>
+            <ul style="list-style: none; padding: 0; font-size: 14px;">
+              <li><a href="#" style="color: #fff; text-decoration: none;">Requirements</a></li>
+              <li><a href="#" style="color: #fff; text-decoration: none;">Earnings Calculator</a></li>
+              <li><a href="#" style="color: #fff; text-decoration: none;">Application Process</a></li>
+              <li><a href="#" style="color: #fff; text-decoration: none;">Driver Stories</a></li>
+              <li><a href="#" style="color: #fff; text-decoration: none;">Support</a></li>
+            </ul>
+          </div>
+          <div style="flex: 1 1 200px;">
+            <h4 style="color: #2FD19B; margin-bottom: 15px;">Contact Us</h4>
+            <ul style="list-style: none; padding: 0; font-size: 14px;">
+              <li><i class="ri-map-pin-line"></i> 123 Ad Street, Marketing City</li>
+              <li><i class="ri-phone-line"></i> (555) 123-4567</li>
+              <li><i class="ri-mail-line"></i> info@adsonwheels.com</li>
+              <li><i class="ri-time-line"></i> Mon-Fri: 9AM - 5PM</li>
+            </ul>
+          </div>
+        </div>
+        <div style="text-align: center; padding-top: 30px; border-top: 1px solid rgba(255,255,255,0.1); font-size: 14px; margin-top: 40px;">
+          <p>&copy; 2025 Ads on Wheels. All rights reserved.</p>
+        </div>
+      </footer>
+      
+</body>
+</html>
