@@ -235,31 +235,23 @@
             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
         }
         
-        /* Pricing Section */
-        .pricing-preview {
-            text-align: center;
-        }
-        
-        .pricing-image {
-            width: 100%;
-            max-width: 900px;
-            margin: 0 auto;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-        }
-        
-        .pricing-link {
-            display: inline-block;
-            margin-top: 30px;
-            font-family: 'AlibabaSans-Medium', sans-serif;
-            color: #0057B8;
-            text-decoration: none;
-            font-size: 18px;
-        }
-        
-        .pricing-link:hover {
-            text-decoration: underline;
-        }
+       /* Pricing Cards Styles */
+       :root { --blue: #0057B8; --dark-blue: #001F54; --orange: #FF7A00; --teal: #009AA8; --light-bg: #F5F7FA; --white: #FFFFFF; --card-radius: 12px; }
+       .pricing-container { display:flex; gap:20px; max-width:1200px; margin:0 auto; padding:20px 0; }
+       .card { background:var(--white); border-radius:var(--card-radius); overflow:hidden; flex:1; display:flex; flex-direction:column; transition:transform 0.3s, box-shadow 0.3s; box-shadow:0 4px 12px rgba(0,0,0,0.05); }
+       .card:hover { transform:translateY(-8px); box-shadow:0 8px 24px rgba(0,0,0,0.1); }
+       .card-header { padding:16px; text-align:center; color:var(--white); font-weight:bold; font-size:20px; }
+       #economy .card-header { background:var(--teal); }
+       #standard .card-header { background:var(--blue); }
+       #premium .card-header { background:var(--orange); }
+       .card-price { text-align:center; font-size:32px; font-weight:bold; margin:16px 0; color:var(--dark-blue); }
+       .card-body { flex:1; padding:0 16px 16px; }
+       .card-body ul { list-style:none; }
+       .card-body li { padding:12px 0; border-bottom:1px solid #EEE; color:var(--dark-blue); font-size:16px; }
+       .card-body li:last-child { border-bottom:none; }
+       .card-footer { padding:16px; text-align:center; }
+       .card-footer button { background:var(--blue); color:var(--white); border:none; border-radius:24px; padding:12px 32px; font-size:16px; cursor:pointer; transition:background 0.3s; }
+       .card-footer button:hover { background:var(--dark-blue); }
         
         /* Testimonials Section */
         .testimonials {
@@ -324,7 +316,7 @@
             background: linear-gradient(135deg, #0057B8 0%, #001F54 100%);
             color: #fff;
             border-radius: 10px;
-            padding: 60px 0 30px;
+            padding: 60px;
             text-align: center;
             margin: 80px 0;
         }
@@ -353,7 +345,6 @@
         footer {
             background-color: #001F54;
             color: #fff;
-            border-radius: 10px;
             padding: 60px 0 30px;
         }
         
@@ -439,9 +430,9 @@
     <!-- Header & Navigation -->
     <header>
         <div class="container header-container">
-            <img src="assets/01dba466cd749599127fc9fde2d739e3283730988033a197ff49e46938a29ed9.png" alt="Ads on Wheels Logo" class="logo">
+            <img src="/Users/pratickdey/Downloads/Website Final/assets/01dba466cd749599127fc9fde2d739e3283730988033a197ff49e46938a29ed9.png" alt="Ads on Wheels Logo" class="logo">
             <ul class="nav-menu">
-                <li><a href="https://ads-on-wheels.netlify.app/">Home</a></li>
+                <li><a href="#">Home</a></li>
                 <li><a href="#">About Us</a></li>
                 <li><a href="#">Cities</a></li>
                 <li><a href="#">How It Works</a></li>
@@ -453,14 +444,14 @@
 
     <!-- Hero Section -->
     <section class="hero">
-        <img src="assets/a9e45cae-afc3-4eb9-9f52-2b08c07b2420.png" alt="Car with advertisements" class="hero-image">
+        <img src="/Users/pratickdey/Downloads/Website Final/assets/a9e45cae-afc3-4eb9-9f52-2b08c07b2420.png" alt="Car with advertisements" class="hero-image">
         <div class="hero-overlay">
             <div class="hero-content">
                 <h1 class="hero-title">Turn Your Drive Into Income</h1>
                 <p class="hero-subtitle">Connect with brands looking to advertise on vehicles or find drivers to display your ads across the city.</p>
                 <div class="hero-buttons">
-                    <a href="forms/advertiser_form.html" class="btn btn-primary">I'm an Advertiser</a>
-                    <a href="forms/driver_partner_form.html" class="btn btn-secondary">Become a Driver Partner</a>
+                    <a href="#" class="btn btn-primary">I'm an Advertiser</a>
+                    <a href="#" class="btn btn-secondary">Become a Driver Partner</a>
                 </div>
             </div>
         </div>
@@ -499,19 +490,68 @@
     <section class="section how-it-works">
         <div class="container">
             
-            <img src="assets/35183273-a1d1-4d14-82fa-6824f140571d.png" alt="How Ads on Wheels works" class="process-image">
+            <img src="https://assets-persist.lovart.ai/agent_images/35183273-a1d1-4d14-82fa-6824f140571d.png" alt="How Ads on Wheels works" class="process-image">
         </div>
     </section>
 
   <!-- Pricing Section -->
+  <!-- Pricing Cards Section -->
   <section class="section">
-    <div class="container pricing-preview">
-        <h2 class="section-title">Flexible Pricing Options</h2>
-        <img src="assets/adc3b6af-8430-46eb-8753-df607d879258.png" alt="Pricing tiers" class="pricing-image">
-        <br><a href="#" class="pricing-link">View detailed pricing <i class="ri-arrow-right-line"></i></a>
+    <div class="container">
+      <h2 class="section-title">Flexible Pricing Options</h2>
+      <div class="pricing-container">
+        <div class="card" id="economy">
+          <div class="card-header">Economy Package</div>
+          <div class="card-price">$1,500/Week</div>
+          <div class="card-body">
+            <ul>
+              <li>5-10 Economy Vehicles</li>
+              <li>1-2 Zip Codes Coverage</li>
+              <li>30 Days Campaign Duration</li>
+              <li>Standard Reporting Dashboard</li>
+              <li>Basic Design Assistance</li>
+              <li>~100,000 Estimated Impressions</li>
+            </ul>
+          </div>
+          <div class="card-footer"><button>Get Started</button></div>
+        </div>
+        <div class="card" id="standard">
+          <div class="card-header">Standard Package</div>
+          <div class="card-price">$3,500/Week</div>
+          <div class="card-body">
+            <ul>
+              <li>15-20 Mid-Size Vehicles</li>
+              <li>3-5 Zip Codes Coverage</li>
+              <li>30-60 Days Campaign Duration</li>
+              <li>Advanced Analytics Dashboard</li>
+              <li>Full Design Services Included</li>
+              <li>~250,000 Estimated Impressions</li>
+              <li>Targeted Time-of-Day Routing</li>
+            </ul>
+          </div>
+          <div class="card-footer"><button>Get Started</button></div>
+        </div>
+        <div class="card" id="premium">
+          <div class="card-header">Premium Package</div>
+          <div class="card-price">$7,500/Week</div>
+          <div class="card-body">
+            <ul>
+              <li>25-30 Premium Vehicles</li>
+              <li>City-Wide Coverage</li>
+              <li>90+ Days Campaign Duration</li>
+              <li>Real-Time Analytics & Reporting</li>
+              <li>Premium Design & Production</li>
+              <li>~500,000+ Estimated Impressions</li>
+              <li>Event-Based Targeting</li>
+              <li>Demographic Route Optimization</li>
+              <li>Campaign Performance Guarantee</li>
+            </ul>
+          </div>
+          <div class="card-footer"><button>Get Started</button></div>
+        </div>
+      </div>
     </div>
-</section>
-
+  </section>
 <!-- Testimonials Section -->
 <section class="section">
     <div class="container">
@@ -560,8 +600,8 @@
         <h2 class="cta-title">Ready to Get Started?</h2>
         <p class="cta-text">Whether you're looking to advertise your business or earn extra income as a driver, Ads on Wheels has the perfect solution for you.</p>
         <div class="cta-buttons">
-            <a href="forms/advertiser_form.html" class="btn btn-primary">I'm an Advertiser</a>
-                    <a href="forms/driver_partner_form.html" class="btn btn-secondary">Become a Driver Partner</a>
+            <a href="#" class="btn btn-secondary">I'm an Advertiser</a>
+            <a href="#" class="btn btn-primary">Become a Driver Partner</a>
         </div>
     </div>
 </section>
@@ -569,7 +609,7 @@
     <footer style="background-color: #001F54; color: #fff; padding: 60px 20px 30px; font-family: Arial, sans-serif;">
         <div style="max-width: 1200px; margin: 0 auto; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 40px;">
           <div style="flex: 1 1 200px;">
-            <img src="assets/01dba466cd749599127fc9fde2d739e3283730988033a197ff49e46938a29ed9.png" alt="Ads on Wheels Logo" style="width: 150px; margin-bottom: 20px;">
+            <img src="/Users/pratickdey/Downloads/Website Final/assets/01dba466cd749599127fc9fde2d739e3283730988033a197ff49e46938a29ed9.png" alt="Ads on Wheels Logo" style="width: 150px; margin-bottom: 20px;">
             <p style="font-size: 14px; line-height: 1.6;">Ads on Wheels connects businesses with drivers to create mobile advertising campaigns that are effective, measurable, and beneficial for everyone involved.</p>
           </div>
           <div style="flex: 1 1 150px;">
@@ -605,8 +645,8 @@
           <div style="flex: 1 1 200px;">
             <h4 style="color: #2FD19B; margin-bottom: 15px;">Contact Us</h4>
             <ul style="list-style: none; padding: 0; font-size: 14px;">
-              <li><i class="ri-map-pin-line"></i> Riga, Latvia</li>
-              <li><i class="ri-phone-line"></i> +371 1234-8567</li>
+              <li><i class="ri-map-pin-line"></i> 123 Ad Street, Marketing City</li>
+              <li><i class="ri-phone-line"></i> (555) 123-4567</li>
               <li><i class="ri-mail-line"></i> info@adsonwheels.com</li>
               <li><i class="ri-time-line"></i> Mon-Fri: 9AM - 5PM</li>
             </ul>
