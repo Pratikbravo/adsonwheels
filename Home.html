@@ -451,16 +451,23 @@
                 <p class="hero-subtitle">Connect with brands looking to advertise on vehicles or find drivers to display your ads across the city.</p>
                 <div class="hero-buttons">
                     <!-- Advertiser Form -->
-<form action="https://formspree.io/f/mpwlqovp" method="POST">
-  <!-- you can add input fields here if you want to collect data -->
-  <button type="submit" class="btn btn-primary">I'm an Advertiser</button>
-</form>
+  <form action="https://formspree.io/f/mpwlqovp" method="POST">
+    <h2>I'm an Advertiser</h2>
+    <input type="text" name="company" placeholder="Company Name" required />
+    <input type="email" name="email" placeholder="Email Address" required />
+    <input type="text" name="campaign" placeholder="Campaign Details" />
+    <button type="submit">Submit</button>
+  </form>
 
-<!-- Driver Partner Form -->
-<form action="https://formspree.io/f/mnnzajvb" method="POST">
-  <!-- add input fields here if needed -->
-  <button type="submit" class="btn btn-secondary">Become a Driver Partner</button>
-</form>
+  <!-- Driver Partner Form -->
+  <form action="https://formspree.io/f/mnnzajvb" method="POST">
+    <h2>Become a Driver Partner</h2>
+    <input type="text" name="name" placeholder="Full Name" required />
+    <input type="email" name="email" placeholder="Email Address" required />
+    <input type="text" name="vehicle" placeholder="Vehicle Details" />
+    <button type="submit">Submit</button>
+  </form>
+
                 </div>
             </div>
         </div>
